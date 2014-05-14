@@ -1,0 +1,23 @@
+[user]
+	name  = marbleplex
+	email = marbleplex@gmail.com
+[alias]
+  st   = status
+  cmt  = commit
+  br   = branch
+  bra  = branch -a     # list remote and local branches
+  co   = checkout
+  df   = diff
+  dfc  = diff --cached
+  lp   = log -p
+  lol  = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  ls   = ls-files
+[core]
+	excludesfile = /Users/barm/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
